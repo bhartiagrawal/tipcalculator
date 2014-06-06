@@ -11,4 +11,5 @@ Completed user stories:
 	Required: Add a settings page to set the default tip.
 
 Walkthrough of all user Stories:
+
 ![TipCalculator](tipCalculator.gif)
