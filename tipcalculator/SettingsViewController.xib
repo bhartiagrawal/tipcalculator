@@ -30,11 +30,31 @@
                         <segment title="15%"/>
                         <segment title="20%"/>
                     </segments>
+                    <connections>
+                        <action selector="onTap:" destination="-1" eventType="valueChanged" id="GvZ-E8-LI7"/>
+                    </connections>
                 </segmentedControl>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select your default tip Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-te-6FD">
+                    <rect key="frame" x="20" y="54" width="280" height="66"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="dSr-dq-vcX" appends="YES" id="QiZ-UN-0Ku"/>
+                <outletCollection property="gestureRecognizers" destination="dSr-dq-vcX" appends="YES" id="9fM-D1-CAa"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="dSr-dq-vcX">
+            <connections>
+                <action selector="onTap:" destination="-1" id="dHw-xB-U9g"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

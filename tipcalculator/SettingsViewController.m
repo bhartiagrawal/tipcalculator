@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 
 @interface SettingsViewController ()
+- (IBAction)onTap:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
 @end
@@ -28,6 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger tipCell = [defaults integerForKey:@"defTipCell"];
+    self.defaultTipControl.selectedSegmentIndex = tipCell;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -37,4 +42,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onTap:(id)sender {
+    NSInteger tipCell = self.defaultTipControl.selectedSegmentIndex;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:tipCell forKey:@"defTipCell"];
+    [defaults synchronize];
+}
 @end
